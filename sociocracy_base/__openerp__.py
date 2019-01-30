@@ -16,6 +16,8 @@
     
     """,
     'data': [
+        'views/sociocracy_menu.xml',
+        'views/role.xml',
 #        'security/easy_my_coop_security.xml',
 #        'security/ir.model.access.csv',
     ],
