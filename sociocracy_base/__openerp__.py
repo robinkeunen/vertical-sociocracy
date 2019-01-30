@@ -18,6 +18,7 @@
     'data': [
         'views/sociocracy_menu.xml',
         'views/role.xml',
+        'views/circle.xml',
 #        'security/easy_my_coop_security.xml',
 #        'security/ir.model.access.csv',
     ],

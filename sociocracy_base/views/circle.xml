@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+        <record id="view_circle_tree" model="ir.ui.view">
+            <field name="name">view.circle.tree</field>
+            <field name="model">circle</field>
+            <field name="arch" type="xml">
+                <tree string="Circles" name="circles">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_circle_form" model="ir.ui.view">
+            <field name="name">view.circle.form</field>
+            <field name="model">circle</field>
+            <field name="arch" type="xml">
+                <form string="circle" name="circle">
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+    <act_window
+            id="action_sociocracy_circle"
+            name="Circles"
+            res_model="circle"
+            view_mode="tree,form"
+            view_id="view_circle_tree"
+    />
+
+    <menuitem id="menu_sociocracy_circles"
+              name="Circles"
+              parent="menu_sociocracy_base"
+              action="action_sociocracy_circle"
+    />
+
+    </data>
+</odoo>

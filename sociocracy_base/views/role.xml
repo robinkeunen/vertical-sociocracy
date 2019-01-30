@@ -8,7 +8,6 @@
             <field name="arch" type="xml">
                 <tree string="Roles" name="roles">
                     <field name="name"/>
-                    <field name="assignee_id"/>
                 </tree>
             </field>
         </record>
@@ -18,8 +17,11 @@
             <field name="model">role</field>
             <field name="arch" type="xml">
                 <form string="Role" name="role">
-                    <field name="name"/>
-                    <field name="assignee_id"/>
+                    <group>
+                        <field name="name"/>
+                        <field name="circle_id"/>
+                        <field name="person_id"/>
+                    </group>
                 </form>
             </field>
         </record>

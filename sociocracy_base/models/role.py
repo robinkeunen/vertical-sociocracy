@@ -9,7 +9,14 @@ class Role(models.Model):
         string='Name',
     )
 
-    assignee_id = fields.Many2one(
-        string='Assignee',
-        comodel_name='assignee',
+    circle_id = fields.Many2one(
+        string='Assigned Circle',
+        comodel_name='circle',
     )
+
+    person_id = fields.Many2one(
+        string='Assigned Person',
+        comodel_name='res.users',
+    )
+
+    # todo constraint: either circle or res_users
