@@ -7,7 +7,7 @@
     "name": "Sociocracy Base",
     "version": "1.0",
     "depends": ["base",
-                ],
+                'mail',],
     "author": "Coop IT Easy SCRLfs",
     "category": "Cooperative management",
     "website": "www.coopiteasy.be",
@@ -16,11 +16,11 @@
     
     """,
     'data': [
+        'security/sociocracy_security.xml',
+#        'security/ir.model.access.csv',
         'views/sociocracy_menu.xml',
         'views/role.xml',
         'views/circle.xml',
-#        'security/easy_my_coop_security.xml',
-#        'security/ir.model.access.csv',
     ],
     'installable': True,
     'application': True,
