@@ -6,7 +6,7 @@
             <field name="name">view.role.tree</field>
             <field name="model">role</field>
             <field name="arch" type="xml">
-                <tree string="Roles" name="role">
+                <tree string="Roles" name="roles">
                     <field name="name"/>
                     <field name="assignee_id"/>
                 </tree>
@@ -24,8 +24,19 @@
             </field>
         </record>
 
+    <act_window
+            id="action_sociocracy_role"
+            name="Roles"
+            res_model="role"
+            view_mode="tree,form"
+            view_id="view_role_tree"
+    />
 
+    <menuitem id="menu_sociocracy_roles"
+              name="Roles"
+              parent="menu_sociocracy_base"
+              action="action_sociocracy_role"
+    />
 
-                  <!--sequence="9"-->
     </data>
 </odoo>
