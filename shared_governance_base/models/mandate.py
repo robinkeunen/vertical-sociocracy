@@ -10,18 +10,15 @@ class Mandate(models.Model):
     name = fields.Char(
         string='Name',
     )
-
     circle_id = fields.One2many(
         'shared.governance.circle',
         'mandate_id',
         string='Assigned Circle',
     )
-
     person_id = fields.Many2one(
         string='Assigned Person',
         comodel_name='res.users',
     )
-
     state = fields.Selection(
         [('draft', 'Draft'),
          ('alive', 'Alive'),

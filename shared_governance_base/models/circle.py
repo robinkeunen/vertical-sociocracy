@@ -4,6 +4,12 @@ from openerp import api, fields, models
 
 class Circle(models.Model):
     _name = 'shared.governance.circle'
+    _constraints = [
+        (models.Model._check_recursion,
+         'Error ! You cannot create recursive'
+         ' circle.',
+         ['parent_id'])
+    ]
 
     name = fields.Char(
         string='Name',
@@ -27,7 +33,7 @@ class Circle(models.Model):
     members = fields.Many2many(
         comodel_name='res.users',
         string='Members')
-    _constraints = [
-        (models.Model._check_recursion, 'Error ! You cannot create recursive'
-         ' circle.', ['parent_id'])
-    ]
+    policy_id = fields.Many2one(
+        comodel_name='shared.governance.policy',
+        string='Policy',
+    )
