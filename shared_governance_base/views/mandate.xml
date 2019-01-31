@@ -17,17 +17,19 @@
             <field name="arch" type="xml">
                 <form string="Mandate" name="mandate">
                     <header>
+                        <button string="Alive" type="object" name="action_alive" states="draft,archived"/>
+                        <button string="Archive" type="object" name="action_archive" states="alive"/>
                         <field name="state" widget="statusbar"/>
                     </header>
                     <sheet string="Mandate">
 	                    <group>
-	                    	<groups>
+	                    	<group>
 		                        <field name="name"/>
-		                        <field name="circle_id"/>
+		                        <field name="circle_id" widget="many2one"/>
 		                        <field name="person_id"/>
-		                    </groups>
-		                    <groups>
-		                    </groups>
+		                    </group>
+		                    <group>
+		                    </group>
 	                    </group>
 	                    <notebook>
 	                    

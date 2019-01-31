@@ -17,7 +17,8 @@ class Circle(models.Model):
     )
     mandate_id = fields.Many2one(
         comodel_name='shared.governance.mandate',
-        string='Mandate')
+        string='Mandate',
+        domain=[('state', '=', 'alive')])
     state = fields.Selection(
         related='mandate_id.state',
         string='State')

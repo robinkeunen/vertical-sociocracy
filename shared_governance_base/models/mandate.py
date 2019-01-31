@@ -26,3 +26,11 @@ class Mandate(models.Model):
         string='State',
         default='draft')
     # todo constraint: either circle or res_users
+
+    @api.multi
+    def action_alive(self):
+        self.write({'state': 'alive'})
+
+    @api.multi
+    def action_archive(self):
+        self.write({'state': 'archived'})
