@@ -27,3 +27,7 @@ class Circle(models.Model):
     members = fields.Many2many(
         comodel_name='res.users',
         string='Members')
+    _constraints = [
+        (models.Model._check_recursion, 'Error ! You cannot create recursive'
+         ' circle.', ['parent_id'])
+    ]
