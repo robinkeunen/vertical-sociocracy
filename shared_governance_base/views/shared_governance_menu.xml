@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <odoo>
-    <menuitem id="menu_shared_gouvernance_main" name="Shared governance"/>
-    <menuitem id="menu_shared_gouvernance_base" name="Shared governance" parent="menu_shared_gouvernance_main"/>
+    <menuitem id="menu_shared_gouvernance_main" name="Shared Governance"/>
+    <menuitem id="menu_shared_gouvernance_base" name="Shared Governance" parent="menu_shared_gouvernance_main"/>
 </odoo>
