@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
 <odoo>
 	<data>
 
         <record id="view_mandate_tree" model="ir.ui.view">
             <field name="name">view.mandate.tree</field>
-            <field name="model">shared.gouvernance.mandate</field>
+            <field name="model">shared.governance.mandate</field>
             <field name="arch" type="xml">
                 <tree string="Mandates" name="mandates">
                     <field name="name"/>
@@ -14,7 +13,7 @@
 
         <record id="view_mandate_form" model="ir.ui.view">
             <field name="name">view.mandate.form</field>
-            <field name="model">shared.gouvernance.mandate</field>
+            <field name="model">shared.governance.mandate</field>
             <field name="arch" type="xml">
                 <form string="Mandate" name="mandate">
                     <header>
@@ -38,7 +37,7 @@
     <act_window
             id="action_shared_gouvernance_mandate"
             name="Roles"
-            res_model="shared.gouvernance.mandate"
+            res_model="shared.governance.mandate"
             view_mode="tree,form"
             view_id="view_mandate_tree"
     />

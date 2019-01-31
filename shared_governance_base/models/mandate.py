@@ -3,16 +3,16 @@ from openerp import api, fields, models
 
 
 class Mandate(models.Model):
-    _name = 'shared.gouvernance.mandate'
+    _name = 'shared.governance.mandate'
 
     _inherit = ['mail.thread', 'ir.needaction_mixin']
-    
+
     name = fields.Char(
         string='Name',
     )
 
     circle_id = fields.One2many(
-        'shared.gouvernance.circle',
+        'shared.governance.circle',
         'mandate_id',
         string='Assigned Circle',
     )
@@ -23,9 +23,9 @@ class Mandate(models.Model):
     )
 
     state = fields.Selection(
-        [('draft','Draft'),
-         ('alive','Alive'),
-         ('rip','Rest in peace')],
+        [('draft', 'Draft'),
+         ('alive', 'Alive'),
+         ('archived', 'Archived')],
         string='State',
         default='draft')
     # todo constraint: either circle or res_users

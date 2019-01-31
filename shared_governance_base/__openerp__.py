@@ -4,21 +4,21 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 {
-    "name": "Shared Gouvernance Base",
+    "name": "Shared Governance Base",
     "version": "1.0",
     "depends": ["base",
-                'mail',],
+                'mail'],
     "author": "Coop IT Easy SCRLfs",
     "category": "Cooperative management",
     "website": "www.coopiteasy.be",
     "license": "AGPL-3",
     "description": """
-    
+
     """,
     'data': [
-        'security/shared_gouvernance_security.xml',
-#        'security/ir.model.access.csv',
-        'views/shared_gouvernance_menu.xml',
+        'security/shared_governance_security.xml',
+        # 'security/ir.model.access.csv',
+        'views/shared_governance_menu.xml',
         'views/mandate.xml',
         'views/circle.xml',
     ],
