@@ -21,10 +21,17 @@
                     </header>
                     <sheet string="Mandate">
 	                    <group>
-	                        <field name="name"/>
-	                        <field name="circle_id"/>
-	                        <field name="person_id"/>
+	                    	<groups>
+		                        <field name="name"/>
+		                        <field name="circle_id"/>
+		                        <field name="person_id"/>
+		                    </groups>
+		                    <groups>
+		                    </groups>
 	                    </group>
+	                    <notebook>
+	                    
+	                    </notebook>
                     </sheet>
                     <div class="oe_chatter">
                         <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>

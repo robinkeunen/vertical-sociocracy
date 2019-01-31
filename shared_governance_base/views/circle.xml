@@ -7,6 +7,8 @@
             <field name="arch" type="xml">
                 <tree string="Circles" name="circles">
                     <field name="name"/>
+                    <field name="mandate_id"/>
+                    <field name="parent_id"/>
                 </tree>
             </field>
         </record>
@@ -15,16 +17,27 @@
             <field name="name">view.circle.form</field>
             <field name="model">shared.governance.circle</field>
             <field name="arch" type="xml">
-                <form string="circle" name="circle">
+                <form string="circle" name="Circle">
                     <header>
-                    
+                    	<field name="state" widget="statusbar"/>
                     </header>
 					<sheet>
 	                    <group>
-	                        <field name="name"/>
+	                    	<group>
+		                        <field name="name"/>
+		                        <field name="mandate_id"/>
+	                        </group>
+	                        <group>
+	                        	<field name="parent_id"/>
+	                        </group>
 	                    </group>
 	                    <notebook>
-	                    
+	                    	<page name="members" string="Members">
+	                    		<field name="members"/>
+	                    	</page>
+	                    	<page name="childs_circle" string="Childs Circle">
+	                    		<field name="child_ids"/>
+	                    	</page>
 	                    </notebook>
                     </sheet>
                 </form>
