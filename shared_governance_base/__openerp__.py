@@ -21,6 +21,7 @@
         'views/shared_governance_menu.xml',
         'views/mandate.xml',
         'views/circle.xml',
+        'views/policy.xml',
     ],
     'installable': True,
     'application': True,
