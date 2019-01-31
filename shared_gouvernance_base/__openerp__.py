@@ -4,7 +4,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 {
-    "name": "Sociocracy Base",
+    "name": "Shared Gouvernance Base",
     "version": "1.0",
     "depends": ["base",
                 'mail',],
@@ -16,10 +16,10 @@
     
     """,
     'data': [
-        'security/sociocracy_security.xml',
+        'security/shared_gouvernance_security.xml',
 #        'security/ir.model.access.csv',
         'views/sociocracy_menu.xml',
-        'views/role.xml',
+        'views/mandate.xml',
         'views/circle.xml',
     ],
     'installable': True,

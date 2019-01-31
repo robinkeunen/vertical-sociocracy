@@ -2,8 +2,8 @@
 from openerp import api, fields, models
 
 
-class Role(models.Model):
-    _name = 'role'
+class Mandate(models.Model):
+    _name = 'shared.gouvenance.mandate'
 
     _inherit = ['mail.thread', 'ir.needaction_mixin']
     
@@ -11,9 +11,10 @@ class Role(models.Model):
         string='Name',
     )
 
-    circle_id = fields.Many2one(
+    circle_id = fields.One2many(
+        'shared.gouvenance.circle',
+        'mandate_id',
         string='Assigned Circle',
-        comodel_name='circle',
     )
 
     person_id = fields.Many2one(

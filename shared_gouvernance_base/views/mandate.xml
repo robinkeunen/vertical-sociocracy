@@ -2,25 +2,25 @@
 <odoo>
 	<data>
 
-        <record id="view_role_tree" model="ir.ui.view">
-            <field name="name">view.role.tree</field>
-            <field name="model">role</field>
+        <record id="view_mandate_tree" model="ir.ui.view">
+            <field name="name">view.mandate.tree</field>
+            <field name="model">shared.gouvernance.mandate</field>
             <field name="arch" type="xml">
-                <tree string="Roles" name="roles">
+                <tree string="Mandates" name="mandates">
                     <field name="name"/>
                 </tree>
             </field>
         </record>
 
-        <record id="view_role_form" model="ir.ui.view">
-            <field name="name">view.role.form</field>
-            <field name="model">role</field>
+        <record id="view_mandate_form" model="ir.ui.view">
+            <field name="name">view.mandate.form</field>
+            <field name="model">shared.gouvernance.mandate</field>
             <field name="arch" type="xml">
-                <form string="Role" name="role">
+                <form string="Mandate" name="mandate">
                     <header>
                         <field name="state" widget="statusbar"/>
                     </header>
-                    <sheet string="Role">
+                    <sheet string="Mandate">
 	                    <group>
 	                        <field name="name"/>
 	                        <field name="circle_id"/>
@@ -36,17 +36,17 @@
         </record>
 
     <act_window
-            id="action_sociocracy_role"
+            id="action_shared_gouvernance_mandate"
             name="Roles"
-            res_model="role"
+            res_model="shared.gouvernance.mandate"
             view_mode="tree,form"
-            view_id="view_role_tree"
+            view_id="view_mandate_tree"
     />
 
-    <menuitem id="menu_sociocracy_roles"
+    <menuitem id="menu_shared_gouvernance_mandates"
               name="Roles"
-              parent="menu_sociocracy_base"
-              action="action_sociocracy_role"
+              parent="menu_shared_gouvernance_base"
+              action="action_shared_gouvernance_mandate"
     />
 
     </data>

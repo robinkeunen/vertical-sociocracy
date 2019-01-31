@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<odoo>
-    <menuitem id="menu_sociocracy_main" name="Sociocracy"/>
-    <menuitem id="menu_sociocracy_base" name="Sociocracy" parent="menu_sociocracy_main"/>
-</odoo>
