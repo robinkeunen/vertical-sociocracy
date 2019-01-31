@@ -42,17 +42,17 @@
         </record>
 
     <act_window
-            id="action_shared_gouvernance_mandate"
-            name="Roles"
+            id="action_shared_governance_mandate"
+            name="Mandates"
             res_model="shared.governance.mandate"
             view_mode="tree,form"
             view_id="view_mandate_tree"
     />
 
-    <menuitem id="menu_shared_gouvernance_mandates"
-              name="Roles"
-              parent="menu_shared_gouvernance_base"
-              action="action_shared_gouvernance_mandate"
+    <menuitem id="menu_shared_governance_mandates"
+              name="Mandates"
+              parent="menu_shared_governance_base"
+              action="action_shared_governance_mandate"
     />
 
     </data>

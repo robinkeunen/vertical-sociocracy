@@ -45,17 +45,17 @@
         </record>
 
     <act_window
-            id="action_shared_gouvernance_circle"
+            id="action_shared_governance_circle"
             name="Circles"
             res_model="shared.governance.circle"
             view_mode="tree,form"
             view_id="view_circle_tree"
     />
 
-    <menuitem id="menu_shared_gouvernance_circles"
+    <menuitem id="menu_shared_governance_circles"
               name="Circles"
-              parent="menu_shared_gouvernance_base"
-              action="action_shared_gouvernance_circle"
+              parent="menu_shared_governance_base"
+              action="action_shared_governance_circle"
     />
 
     </data>
