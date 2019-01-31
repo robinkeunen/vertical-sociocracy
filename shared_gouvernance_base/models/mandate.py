@@ -3,7 +3,7 @@ from openerp import api, fields, models
 
 
 class Mandate(models.Model):
-    _name = 'shared.gouvenance.mandate'
+    _name = 'shared.gouvernance.mandate'
 
     _inherit = ['mail.thread', 'ir.needaction_mixin']
     
@@ -12,7 +12,7 @@ class Mandate(models.Model):
     )
 
     circle_id = fields.One2many(
-        'shared.gouvenance.circle',
+        'shared.gouvernance.circle',
         'mandate_id',
         string='Assigned Circle',
     )

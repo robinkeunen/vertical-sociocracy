@@ -18,7 +18,7 @@
     'data': [
         'security/shared_gouvernance_security.xml',
 #        'security/ir.model.access.csv',
-        'views/sociocracy_menu.xml',
+        'views/shared_gouvernance_menu.xml',
         'views/mandate.xml',
         'views/circle.xml',
     ],

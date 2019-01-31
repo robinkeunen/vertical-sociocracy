@@ -9,5 +9,5 @@ class Circle(models.Model):
         string='Name',
     )
     mandate_id = fields.Many2one(
-        comodel='shared.gouvenance.mandate',
+        comodel_name='shared.gouvenance.mandate',
         string='Mandate')
